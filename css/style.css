@@ -23,6 +23,8 @@
 .bg-image {
     background-image: url('/images/1.jpg');
     /* 這裡換成你自己的圖片 URL */
+
+
     background-size: cover;
     background-position: center;
     height: 80vh;

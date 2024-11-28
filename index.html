@@ -18,6 +18,11 @@
 
     <meta property="og:image" content="https://www.blackgentleman.com.tw/images/1.jpg">
     <link rel="apple-touch-icon" href="/images/logo.png">
+<!-- 引用　AOS.js -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
 </head>
 
 <body class=" text-white" style="background-color: #181818;">
@@ -63,8 +68,8 @@
             </div>
         </div>
     </nav>
-
-    <div class="bg-image">
+                           <!-- bg-image是index主圖 -->
+    <div class="bg-image" data-aos="fade-right"  data-aos-offset="0" data-aos-delay="500">
         <div class="content">
             <h1>黑紳士安全顧問公司</h1>
             <p>為您提供專業的安全顧問服務</p>
@@ -116,6 +121,7 @@
         <div class="row ">
             <!--圖1-->
             <div class="col-lg-4 col-md-6 mb-4">
+                <a href="/service.html">
                 <div class="card border border-0  dynamic-img">
                     <img src="/images/service-1.jpg" class="card-img-top" alt="服務圖片">
                     <div class="img-title">
@@ -123,32 +129,38 @@
                         <small>Personal Bodyguard</small>
                     </div>
                 </div>
+               </a>
             </div>
 
             <!--圖2-->
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card border border-0  dynamic-img">
+                    <a href="/service.html">
                     <img src="/images/service-2.jpg" class="card-img-top" alt="服務圖片">
                     <div class="img-title">
                         <h3>長期駐點</h3>
                         <small>Long-term Deployment</small>
                     </div>
                 </div>
+            </a>
             </div>
 
             <!--圖3-->
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card border border-0  dynamic-img">
+                    <a href="/service.html">
                     <img src="/images/service-3.jpg" class="card-img-top" alt="服務圖片">
                     <div class="img-title">
                         <h3>短期派遣</h3>
                         <small>Short-term Deployment</small>
                     </div>
                 </div>
+            </a>
             </div>
 
             <!--圖4-->
             <div class="col-lg-4 col-md-6 mb-4">
+                <a href="/service.html">
                 <div class="card border border-0  dynamic-img">
                     <img src="/images/service-4.jpg" class="card-img-top" alt="服務圖片">
                     <div class="img-title">
@@ -156,10 +168,12 @@
                         <small>Personal Security Protection</small>
                     </div>
                 </div>
+            </a>
             </div>
 
             <!--圖5-->
             <div class="col-lg-4 col-md-6 mb-4">
+                <a href="/service.html">
                 <div class="card border border-0  dynamic-img">
                     <img src="/images/service-5.jpg" class="card-img-top" alt="服務圖片">
                     <div class="img-title">
@@ -167,10 +181,12 @@
                         <small>International Security Protection</small>
                     </div>
                 </div>
+            </a>
             </div>
 
             <!--圖6-->
             <div class="col-lg-4 col-md-6 mb-4">
+                <a href="/service.html">
                 <div class="card border border-0  dynamic-img">
                     <img src="/images/service-6.jpg" class="card-img-top" alt="服務圖片">
                     <div class="img-title">
@@ -178,10 +194,12 @@
                         <small>Court Security Protection</small>
                     </div>
                 </div>
+            </a>
             </div>
 
             <!--圖7-->
             <div class="col-lg-4 col-md-6 mb-4">
+                <a href="/service.html">
                 <div class="card border border-0  dynamic-img">
                     <img src="/images/service-7.jpg" class="card-img-top" alt="服務圖片">
                     <div class="img-title">
@@ -189,10 +207,12 @@
                         <small>Business Security Protection</small>
                     </div>
                 </div>
+            </a>
             </div>
 
             <!--圖8-->
             <div class="col-lg-4 col-md-6 mb-4">
+                <a href="/service.html">
                 <div class="card border border-0  dynamic-img">
                     <img src="/images/service-8.jpg" class="card-img-top" alt="服務圖片">
                     <div class="img-title">
@@ -200,10 +220,12 @@
                         <small>Disguised Family Escort</small>
                     </div>
                 </div>
+            </a>
             </div>
 
             <!--圖9-->
             <div class="col-lg-4 col-md-6 mb-4">
+                <a href="/service.html">
                 <div class="card border border-0  dynamic-img">
                     <img src="/images/service-9.jpg" class="card-img-top" alt="服務圖片">
                     <div class="img-title">
@@ -211,10 +233,12 @@
                         <small>Event Special Operations and Logistics</small>
                     </div>
                 </div>
+            </a>
             </div>
 
             <!--圖10-->
             <div class="col mb-4">
+                <a href="/service.html">
                 <div class="card border border-0  dynamic-img">
                     <img src="/images/service-10.jpg" class="card-img-top" alt="服務圖片">
                     <div class="img-title">
@@ -222,6 +246,7 @@
                         <small>Valuables Escort</small>
                     </div>
                 </div>
+            </a>
             </div>
 
         </div>
@@ -328,6 +353,20 @@
 
     <script src="js/style.js"></script>
 
+<!-- AOS Library JS -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 初始化 AOS
+        AOS.init({
+            
+            duration: 1500,    // 动画持续时间
+            once: true,        // 动画只触发一次
+            offset: 0          // 当元素进入视窗时触发
+
+        });
+    });
+</script>
 
 
 
