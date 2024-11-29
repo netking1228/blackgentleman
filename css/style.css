@@ -136,16 +136,44 @@ a:active {
     opacity: 0.8; /* Hover 时透明度 */
 }
 
+/* 翻轉測試 */
+.dynamic-img img {
+    transform: rotateY(0deg); /* 初始状态 */
+    backface-visibility: hidden; /* 防止背面显示 */
+    transition: transform 0.6s ease-in-out; /* 平滑过渡 */
+}
+
+.dynamic-img img.flip {
+    animation: spinIn 1s ease-in-out; /* 执行动画 */
+}
+
+/* 关键帧动画 */
+@keyframes spinIn {
+    0% {
+        transform: rotateY(90deg); /* 从90度开始 */
+        opacity: 0; /* 可选：淡入效果 */
+    }
+    50% {
+        transform: rotateY(180deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotateY(0deg); /* 最终显示正面 */
+        opacity: 1;
+    }
+}
 
 
 
 
 
+
+/* 
 .dynamic-img {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-}
+} */
 
 .dynamic-img.visible {
     opacity: 1;

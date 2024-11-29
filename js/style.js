@@ -43,3 +43,28 @@ if (window.location.pathname.endsWith('contact.html')) {
     });
 }
 
+// 圖片出現時翻轉
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".dynamic-img img"); // 选中所有目标图片
+
+    const observerOptions = {
+        root: null, // 使用视窗为根
+        rootMargin: "0px", // 触发范围（可调整）
+        threshold: 0.1, // 目标元素至少进入 10% 时触发
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("flip"); // 添加类触发动画
+                observer.unobserve(entry.target); // 停止观察，避免重复触发
+            }
+        });
+    }, observerOptions);
+
+    images.forEach((img) => {
+        observer.observe(img); // 观察每个图片
+    });
+});
+
+
